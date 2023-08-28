@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@300&family=Ysabeau+SC&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: serif;
+}
+body {
+  overflow: hidden;
+  background-image: linear-gradient(to right, #020024, #090979, #00d4ff);
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+/*---------------------FOr ball animation----------------------*/
+
+@keyframes anime {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  50% {
+    transform: translate(10%, -10%);
+  }
+}
+
+.outer-container {
+  height: 30em;
+  width: 50em;
+  background: rgba(255, 255, 255, 0.298);
+  box-shadow: -10px 10px 10px 5px rgba(0, 0, 0, 0.336);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-container {
+  height: 90%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.name {
+  padding-top: 2px;
+  font-size: 45px;
+  font-weight: 600;
+  color: #ffff;
+  text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.all-inp-btn {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 20px;
+  justify-items: center;
+  align-content: center;
+}
+.inputs {
+  width: 250px;
+  height: 100px;
+  /* background-color: #000; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  > * {
+    padding-left: 20px;
+  }
+  > input {
+    outline: none;
+    border: none;
+    font-size: 30px;
+    font-weight: 600;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    border-bottom: 2px solid rgb(1, 84, 185);
+  }
+}
+.cel-inputs {
+  overflow: hidden;
+  > label {
+    font-size: 30px;
+    font-weight: 600;
+    color: #002156;
+  }
+
+  > input {
+    height: 50%;
+    width: 90%;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+}
+.temp-opt {
+  > .temp_diff {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 30px;
+    height: 50%;
+    outline: none;
+    width: 100%;
+    background-color: #f5f7fa6c;
+    font-size: 23px;
+    font-weight: 600;
+    border-bottom: 2px solid rgb(1, 84, 185);
+    color: #002156;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+}
+.result-container {
+  > label {
+    font-size: 25px;
+    font-weight: 600;
+    color: #002156;
+  }
+  > span {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff5f;
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 10px;
+    border-radius: 15px;
+    border-bottom: 2px solid rgb(1, 84, 185);
+  }
+}
+.Ans {
+  align-items: center;
+  margin-top: 20px;
+  > input {
+    width: 80%;
+    height: 50%;
+    text-align: center;
+    border: 3px solid #3565b1;
+    transition: 0.5s;
+  }
+  > input:hover {
+    background-color: #84bdff;
+    transition: 0.5s;
+  }
+}
+/* Media Query */
+@media (min-width: 319px) and (max-width: 450px) {
+  .outer-container {
+    height: 30em;
+    width: 20em;
+  }
+  .inputs {
+    width: 250px;
+    height: 80px;
+    > label,
+    .inputs {
+      font-size: 25px;
+    }
+  }
+  .all-inp-btn {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 0;
+    column-gap: 0;
+  }
+  .Ans {
+    margin-top: 5px;
+  }
+  .result {
+    padding-top: 0px;
+  }
+  .name {
+    text-align: center;
+    font-size: 35px;
+  }
+  .hrline {
+    width: 90%;
+  }
+@media (min-width: 450px) and (max-width: 650px) {
+  .outer-container {
+    height: 30em;
+    width: 30em;
+  }
+  .inputs {
+    > label,
+    .inputs {
+      font-size: 25px;
+    }
+    width: 250px;
+    height: 80px;
+  }
+  .all-inp-btn {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 0;
+    column-gap: 0;
+  }
+  .Ans {
+    margin-top: 5px;
+  }
+  .result {
+    padding-top: 0px;
+  }
+  .name {
+    text-align: center;
+
+    font-size: 35px;
+  }
+  .hrline {
+    width: 90%;
+  }
+ 
+@media (min-width: 650px) and (max-width: 850px) {
+  .outer-container {
+    height: 30em;
+    width: 40em;
+  }
+  .hrline {
+    width: 90%;
+  }
